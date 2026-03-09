@@ -1,7 +1,18 @@
 # E-Commerce Sales Analysis
 
+## Project Overview
+This project analyzes sales performance and customer purchasing behavior using a retail transaction dataset. The goal is to identify sales trends, profitable product categories, and factors affecting profitability.
+
+The analysis includes data cleaning, exploratory data analysis (EDA), and visualization to generate business insights.
+
 ## Business Problem
-Analyze sales performance and identify factors influencing profit and revenue.
+Companies need to understand sales performance and customer behavior to increase profitability and optimize business strategies.
+This project aims to answer several questions:
+
+- Which product categories generate the highest sales?
+- Which regions contribute the most revenue?
+- How do discounts affect profits?
+- What is the sales trend over the year?
 
 ## Dataset
 The dataset used in this project is obtained from Kaggle.
@@ -10,38 +21,57 @@ Source:
 https://www.kaggle.com/datasets/thuandao/superstore-sales-analytics?resource=download
 
 The dataset contains transaction records including 
-order_id → Unique identifier for each order.
-order_date → Date when the order was placed.
-ship_date → Date when the order was shipped.
-ship_mode → Shipping method chosen by the customer (Standard Class, Second Class, etc.).
-customer_name → Name of the customer who placed the order.
-segment → Customer segment classification (Consumer, Corporate, Home Office).
-country → Country where the customer is located.
-state → State or province of the customer.
-market → Market grouping that represents a broader geographic area (e.g., APAC, EU, US).
-region → Regional classification within each market.
-product_id → Unique identifier for each product.
-category → High-level product category.
-sub_category → Detailed classification of the product.
-product_name → Name of the product.
-sales → Total sales value for the order line.
-quantity → Number of units purchased.
-discount → Discount applied to the order.
-profit → Profit or loss generated from the transaction.
-shipping_cost → Cost incurred to ship the order.
-order_priority → Priority level assigned to the order.
-year → Year when the order was placed.
+- order_id
+- order_date
+- ship_date
+- ship_mode
+- customer_name
+- segment
+- country
+- state
+- market
+- region
+- product_id
+- category
+- sub_category
+- product_name
+- sales
+- quantity
+- discount
+- profit
+- shipping_cost
+- order_priority
+- year 
 
-## Tools
-R, dplyr, ggplot2
+## Tools & Technologies
+The analysis was conducted using:
 
-## Analysis
-- Data cleaning
-- Exploratory data analysis
-- Sales trend analysis
-- Profit vs discount analysis
+- **R**
+- tidyverse (dplyr, ggplot2)
+- lubridate
+- janitor
 
-## Key Insights
-- Consumer segment contributes the highest sales.
-- High discounts tend to reduce profit margins.
-- Some regions dominate overall revenue.
+## Data Cleaning
+Before performing the analysis, several preprocessing steps were applied:
+
+- Standardizing column names
+- Converting date variables into proper date format
+- Removing duplicate records
+- Checking for missing values
+- Creating additional variables such as:
+  - order_month
+  - order_year
+  - shipping_time
+
+These steps ensure the dataset is ready for reliable analysis.
+
+## Exploratory Data Analysis
+Exploratory data analysis was conducted to understand sales patterns and key business metrics.
+
+Key analyses include:
+- Sales trend over time
+- Sales distribution by product category
+- Top selling products
+- Sales performance by region
+- Profit vs discount relationship
+- Customer segment contribution
